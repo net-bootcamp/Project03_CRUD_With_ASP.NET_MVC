@@ -1,0 +1,18 @@
+﻿@{
+    var furniture = (Furniture)ViewData["Furnitur"];
+}
+
+@Html.Partial("_LayoutPartial")
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Name: @furniture.Name</h5>
+        <p class="card-text">Image:<img src="@furniture.Image" width="200" height="200"/> </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Id: @furniture.Id</li>
+        <li class="list-group-item">Price: @furniture.Price</li>
+
+    </ul>
+</div>
+
+<a class="btn btn-info" asp-controller="Furnitures" asp-action="Index">Back </a>

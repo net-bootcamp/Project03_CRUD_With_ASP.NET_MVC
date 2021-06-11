@@ -1,0 +1,37 @@
+﻿@model Furniture
+@{
+    var Furnitures = (Furniture)ViewData["Furnitur"];
+}
+@Html.Partial("_LayoutPartial")
+
+<form asp-action="Edit" method="post" class="form-horizontal">
+    <div class="form-group">
+        <div>
+            <input type="hidden" asp-for="Id" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <div>
+            <input asp-for="Name" value="@Furnitures.Name" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Image">Image</label>
+        <div>
+            <input asp-for="Image" value="@Furnitures.Image" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <div>
+            <input asp-for="Price" value="@Furnitures.Price" />
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Update" />
+    </div>
+</form>

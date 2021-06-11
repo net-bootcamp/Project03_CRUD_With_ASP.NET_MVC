@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        .btn-secondary,
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            color: yellow;
+            text-shadow: none; /* Prevent inheritance from `body` */
+        }
+
+        .cover-container {
+            max-width: 42em;
+            background-image: https://a.top4top.io/p_1974z9szy1.jpeg;
+        }
+
+        .nav-masthead .nav-link {
+            padding: .25rem 0;
+            font-weight: 700;
+            color: black;
+            background-color: transparent;
+            border-bottom: .25rem solid transparent;
+        }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link + .nav-link {
+                margin-left: 1rem;
+            }
+
+        .nav-masthead .active {
+            color: rgb(0, 0, 0);
+            border-bottom-color: rgb(0, 0, 0);
+        }
+
+        .box {
+            width: 600px;
+            height: 200px;
+            border-radius: 15px 50px;
+            padding: 20px;
+            text-align: center;
+            padding: auto;
+            margin: 20%;
+            margin-right: 40%;
+            background-color: #bcc7ca34;
+            box-shadow: inherit;
+            position: absolute;
+            right: -450px;
+            top: -30px;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @@media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .back {
+            background-image: url(https://www.aferoghlu.com/images/aee48b9e-12f1-406d-8251-196129e9913b164310099-furniture-wallpapers.jpg);
+            background-color: aliceblue;
+            text-align: center;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            text-shadow: 0.5px 0.5px #75B9BE;
+            font-family: 'cursive';
+        }
+    </style>
+</head>
+<body class="back">
+
+    <div class="back">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Furniture Store</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contect">Contect</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="box">
+
+            <h1>Welcome</h1>
+            <p class="lead">
+            <p class="lead">
+                @RenderBody()
+            </p>
+            </p>
+
+
+        </main>
+
+
+
+    </div>
+</body>
+</html>

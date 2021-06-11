@@ -1,0 +1,26 @@
+﻿@{
+    var Furnitures = (List<Furniture>)ViewData["Furniture"];
+}
+
+@foreach (var item in Furnitures) {
+    <div class="custom-control-inline" style="padding:20px">
+        <div class="card border-primary mb-5" style="width: 400px; height: 500px; display: inline-block; background-color: white; text-align: center ">
+            <div class="card-header bg-transparent border-success">@item.Name</div>
+            <div class="card-body text-success">
+                <h5 class="card-title"><img src="@item.Image" width="200" height="200" /></h5>
+                <p class="card-text">@item.Price SR</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">
+                <a href="/Furnitures/Edit/@item.Id">
+                    <button class="btn btn-info">Edit</button>
+                </a>
+                <a href="/Furnitures/Details/@item.Id">
+                    <button class="btn btn-info">Show </button>
+                </a>
+                <form method="post" asp-controller="Furnitures" asp-action="Delete" asp-route-id="@item.Id">
+                    <input type="submit" value="Drop" class="btn btn-danger ml-2" />
+                </form>
+            </div>
+        </div>
+    </div>
+}
